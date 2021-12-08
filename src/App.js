@@ -7,7 +7,9 @@ class App extends React.Component {
     super(props);
     this.state = {
       justClicked: null,
-      letters: Array.from({ length: 128 }, (n, i) => String.fromCharCode(i)),
+      letters: Array.from({ length: 128 }, (n, i) =>
+        JSON.stringify(String.fromCharCode(i))
+      ),
       //console.log(letters.findIndex(i)),
     };
     console.log(this.state.letters);
